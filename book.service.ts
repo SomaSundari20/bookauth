@@ -14,12 +14,12 @@ export class BookService {
 
   savebook(books : any[] ){
     const tk = this._auth.gettoken();
-    return this._httpClient.post("https://httproject-319cb-default-rtdb.asia-southeast1.firebasedatabase.app/book/data.json",books)
+    return this._httpClient.post("https://httproject-319cb-default-rtdb.asia-southeast1.firebasedatabase.app/data.json",books)
   }
 
   getbook(books : any[]){
     const tk = this._auth.gettoken();
-    return this._httpClient.get("https://httproject-319cb-default-rtdb.asia-southeast1.firebasedatabase.app/book/data.json? auth="+tk)
+    return this._httpClient.get("https://httproject-319cb-default-rtdb.asia-southeast1.firebasedatabase.app/data.json? auth="+tk)
   }
 }
  
